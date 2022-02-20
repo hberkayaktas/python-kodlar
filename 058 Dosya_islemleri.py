@@ -22,3 +22,35 @@ for i in dosya:
 
 #veya satır satır okuma
 dosya.readline()
+
+#dosyayı kendi  açıp kendi  kapıyor buffer kendiliğinden 
+# serbest kalıyor
+#dosya.seek(10)  10 harf atlayıp veriçekicek
+# print(dosya.read())
+dosya.seek(10)
+#10 karakter git
+str1 = dosya.read(5)
+#5 karakterlik veri çek
+dosya.seek(15)
+#15 karakter git
+str2 = dosya.read(5)
+#5 karakter veri çek
+
+print(str1,str2)
+
+
+#dosya daki  satırları bir listeye atama ve yazdırma
+liste = dosya.readlines()
+print(liste[1])
+
+with open("yazilim.txt","r+") as dosya:
+    data = dosya.readlines()
+    data.insert(1,"PHP : Rasmus liedorf22\n")
+    dosya.seek(0)
+    dosya.writelines(data)
+
+with open("yazilim.txt","r+") as dosya:
+    data = dosya.readlines()
+    data.insert(1,"PHP : Rasmus liedorf22\n")
+    dosya.seek(0)
+    dosya.writelines(data)
