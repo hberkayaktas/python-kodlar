@@ -14,7 +14,7 @@ class Pencere(QWidget):
 
     def setUI(self):
         baslik = QLabel("")
-        aciklamalabel = QLabel("Link :")
+        aciklamalabel = QLabel("<a href='#'>Link :</a>")
         logo = QLabel()
         self.giris = QLineEdit()
         gonder = QPushButton()
@@ -22,17 +22,17 @@ class Pencere(QWidget):
 
         #Baslik
         baslik.setText("""
-        <h1><font color =\"black\">İnci sözlük entry Alıcı</font></h1>
+        <a><h1><font color =\"black\">İnci sözlük entry Alıcı</font></h1></a>
         """)
         baslik.setFont(QFont("Helvetica",15,QFont.Bold))
         baslik.setAlignment(Qt.AlignCenter)
 
         #logo
-        logo.setPixmap(QPixmap("01 simge/logo.png"))
+        logo.setPixmap(QPixmap("01simge/logo.png"))
         logo.setAlignment(Qt.AlignCenter)
 
         #Button
-        gonder.setIcon(QIcon("01 simge/gonder.png"))
+        gonder.setIcon(QIcon("01simge/gonder.png"))
 
         #hbox
         h_box = QHBoxLayout()
