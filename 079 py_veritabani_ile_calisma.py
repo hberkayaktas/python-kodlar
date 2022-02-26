@@ -1,4 +1,5 @@
 import sqlite3
+#pip install pysqlite3
 
 con = sqlite3.connect("dersler.db")
 
